@@ -22,7 +22,5 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('', views.Main),
-    path('data_anal/', include('caruiapp.urls')),
-    
+    path('parking/', include('caruiapp.urls')),
 ]

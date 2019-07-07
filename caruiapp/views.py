@@ -3,7 +3,13 @@ from django.http.response import HttpResponseRedirect
 
 # Create your views here.
 def Main(request):
-    return render(request, "index.html")
+    return render(request, "main.html")
 
-def School(request):
-    return render(request, "school.html")
+def Intro(request):
+    return render(request, "data_anal_intro/intro.html")
+
+def Weekday(request):
+    return render(request, "data_anal_proc/weekday.html")
+
+def Weekend(request):
+    return render(request, "data_anal_proc/weekend.html")
