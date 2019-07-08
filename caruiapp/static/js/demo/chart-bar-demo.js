@@ -76,7 +76,7 @@ var myBarChart = new Chart(
 							drawBorder : false
 						},
 						ticks : {
-							maxTicksLimit : 6
+							maxTicksLimit : 25
 						},
 						maxBarThickness : 25,
 					} ],
