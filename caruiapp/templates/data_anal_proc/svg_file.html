@@ -164,18 +164,17 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Breadcrumbs -->
-          
 			{% block content %}
 			{% load static %}
-			
-			<h3>주차 문제 추이 분석</h3>
-			{% endblock content %}
-			
+			{% endblock content %}			
         <!-- Page Heading -->
          <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">퇴근 후 거주민 주차 문제 발생</h1>
          </div>
-              
+         
+    	 <div class="card-body">
+    	 	<script src='{% static "python/svg/large_popul.svg" %}'></script>
+    	 </div>
         <!-- /.container-fluid -->
 
       </div>
