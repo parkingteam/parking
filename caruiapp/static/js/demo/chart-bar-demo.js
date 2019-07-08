@@ -76,14 +76,14 @@ var myBarChart = new Chart(
 							drawBorder : false
 						},
 						ticks : {
-							maxTicksLimit : 6
+							maxTicksLimit : 25
 						},
 						maxBarThickness : 25,
 					} ],
 					yAxes : [ {
 						ticks : {
 							min : 0,
-							max : 40000,
+							max : 400000,
 							maxTicksLimit : 5,
 							padding : 10,
 							// Include a dollar sign in the ticks
