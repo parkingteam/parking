@@ -10,15 +10,14 @@
   <meta name="author" content="">
 
   <title>ParkingHeros</title>
-  
-  
+
   <!-- Custom fonts for this template-->
   <link href='{% static "vendor/fontawesome-free/css/all.min.css" %}' rel="stylesheet" type="text/css">
   <link href= "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href='{% static "css/sb-admin-2.min.css" %}' rel="stylesheet" type="text/css">
-  <!-- moadal css -->
+  <link href='{% static "css/sb-admin-2.min.css" %}' rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -30,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="main">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href='main'>
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -51,7 +50,9 @@
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">분석</div>
+      <div class="sidebar-heading">
+        분석
+      </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
@@ -78,6 +79,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
             <a class="collapse-item" href="utilities-color.html">Colors</a>
+            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
       </li>
@@ -99,10 +103,24 @@
             <h6 class="collapse-header">데이터 수집 참고 사이트</h6>
             <a class="collapse-item" href="https://data.seoul.go.kr/">서울시 열린 데이터 광장</a>
             <a class="collapse-item" href="https://www.data.go.kr/">공공 데이터 포털</a>
+          	<div class="collapse-divider"></div>
           </div>
         </div>
       </li>
+	  
+	  <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Charts</span></a>
+      </li>
 
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span></a>
+      </li>
    
 
       <!-- Divider -->
@@ -142,12 +160,7 @@
           </form>
         </nav>
         <!-- End of Topbar -->
-		<!-- Scroll to Top Button-->
-		<a class="scroll-to-top rounded" href="#page-top" style="display: none;">
-   		 <i class="fas fa-angle-up"></i>
- 		</a>
-		
-		
+
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Breadcrumbs -->
@@ -155,9 +168,8 @@
 			{% block content %}
 			{% load static %}
 			
-			<h3>분석 과정(주말)</h3>
-			{% endblock content %}
-			
+			<h3>주차 문제 추이 분석</h3>
+			{% endblock content %}			
         <!-- Page Heading -->
          <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">주차 문제가 심각한 지역을 선별하기 위한 요인 선정</h1>
@@ -198,7 +210,7 @@
                
 
                <div class="layer" id="iframeTarget">
-					<!-- Button to trigger modal -->
+				<!-- Button to trigger modal -->
 				<a href='#myModal' role="button" class="btn" data-toggle="modal">서울시 지도로 확인하기.</a>
 			
 				<!-- Modal -->
@@ -217,13 +229,14 @@
 				    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 				  </div>
 				</div>        
-				</div>
-                             
+				</div>             
            </div>
           </div>
+          <!-- 여기 까지 한짝. -->
          </div>
         </div>
-            
+         <!-- /.container-fluid -->
+      </div>       
             
       <!-- End of Main Content -->
 	 </div>

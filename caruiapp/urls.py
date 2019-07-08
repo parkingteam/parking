@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.Main),path('main', views.Main),
     path('intro', views.Intro),
     path('weekday', views.Weekday),
-    path('weekend', views.Weekend), 
+    path('weekend', views.Weekend),
 ]
