@@ -13,3 +13,6 @@ def Weekday(request):
 
 def Weekend(request):
     return render(request, "data_anal_proc/weekend.html")
+
+def Result(request):
+     return render(request, "data_anal_proc/result.html")

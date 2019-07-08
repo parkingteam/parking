@@ -155,12 +155,12 @@
 			{% block content %}
 			{% load static %}
 			
-			<h3>분석 과정(주말)</h3>
+			<h3>Clstering 분석 결과</h3>
 			{% endblock content %}
 			
         <!-- Page Heading -->
          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">주차 문제가 심각한 지역을 선별하기 위한 요인 선정</h1>
+            <h1 class="h3 mb-0 text-gray-800">군집화 분석 결과 시각화</h1>
          </div>
          <div class="d-sm-flex align-items-center justify-content-between mb-3">
          
@@ -172,82 +172,47 @@
            <div class="card shadow mb-3">
                 <!-- Card Header - Dropdown -->
 				  <a class="btn btn-primary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    <h7>변수 설정</h7>
+				    <h7>시각화</h7>
 				  </a>
-				
-				<!-- 메뉴 보이기 -->
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				  	<a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="True" >
-				      1) 변수 설정</a>
-				  	<a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="True" >
-				  	  2) 시각화 자료</a>
-				    <a class="dropdown-item" href="#">
-				      3) 생활인구 상위 구 선정</a>
-				  </div>
-				
-                <!-- 1) 생활인구란? 의 collapse-->
-                <div class="collapse" id="collapseCardExample" style="">
+              
+         
                 <div class="card-body">
-                	<h6 class="m-0 font-weight-bold text-primary">1-1) 생활 인구란?</h6>
-                   	 ==> 자치구별 주말 최대 인구밀집 인원수
-              	    	            
-                	<h6 class="m-0 font-weight-bold text-primary">1-2) 요소 선택 이유</h6>
-                   	 ==> 인구 밀집이 높을 수록 외부 차량 유입 확률이 높아져 주차공간이 부족할 것이라 추측.
-                   	 <hr style="border:none; border:1px dashed blue;"> 
-                </div>                  
-               </div>
-                   <div class="collapse" id="collapseCardExample" style="">
-                <div class="card-body">
-                	<h6 class="m-0 font-weight-bold text-primary">2-1) 사업체수?</h6>
-                   	 ==> 자치구별 사업체 수
-              	   	            
-                	<h6 class="m-0 font-weight-bold text-primary">2-2) 요소 선택 이유</h6>
-                   	 ==> 사업체 수가 많을 수록 외부 차량 유입확률이 높아져 주차공간이 부족 할 것이라 추측
-                   	 <hr style="border:none; border:1px dashed blue;"> 
-                </div>                  
-               </div>
-                     <div class="collapse" id="collapseCardExample" style="">
-                <div class="card-body">
-                	<h6 class="m-0 font-weight-bold text-primary">2-1) 주정차 위반단속 수?</h6>
-                   	 ==> 자치구별 주정차 위반 단속 수
-                 	            
-                	<h6 class="m-0 font-weight-bold text-primary">2-2) 요소 선택 이유</h6>
-                   	 ==> 주정차 위반단속 수가 높을 수록 주차공간 부족 수가 높을 것이라 추측
-                   	 <hr style="border:none; border:1px dashed blue;"> 
-                </div>                  
+                	<h6 class="m-0 font-weight-bold text-primary">[생활인구, 주정차위반단속수, 사업체수]상관관계</h6>
+                	<div class="text-center">
+                		<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 100rem;" src='{% static "img/rel.png" %}' >
+            		</div> 
                </div>
                
-
-               <div class="layer" id="iframeTarget">
-					<!-- Button to trigger modal -->
-				<a href='#myModal' role="button" class="btn" data-toggle="modal">서울시 </a>
-			
-				<!-- Modal -->
-				<div id="myModal" class="modal hide fade" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="card-body">
-				  <div class="modal-header">
-				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				    <h3 id="myModalLabel">서울시 인구 밀집 지도</h3>
-				  </div>
-				  </div>
-				  <div class="card-body">
-				  <div class="modal-dialog modal-lg" role="document">
-					<iframe src='{% static "python/result/large_popul.svg" %}'></iframe>
-				  </div>
-				  <div class="modal-footer">
-				    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-				  </div>
-				</div>        
-				</div>
-                             
-           </div>
-          </div>
-         </div>
-        </div>
+ 				
+ 		     <div class="card-body">
+                	<h6 class="m-0 font-weight-bold text-primary">Clustering Dendrogram</h6>
+                	<div class="text-center">
+                		<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 100rem;" src='{% static "img/den.png" %}' >
+            		</div> 
+               </div>
+               
+                <div class="card-body">
+                	<h6 class="m-0 font-weight-bold text-primary">3D Scatter</h6>
+                	<div class="text-center">
+                		<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 100rem;" src='{% static "img/3d.png" %}' >
+            		</div> 
+               </div>
+               
+               </div>
             
+
+				  
+				  				     </div>
+        </div>
+				
+
+              
+          
+      
             
       <!-- End of Main Content -->
 	 </div>
+	   </div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -258,7 +223,7 @@
       </footer>
       <!-- End of Footer -->
 
-    </div>
+  
     <!-- End of Content Wrapper -->
 
   </div>

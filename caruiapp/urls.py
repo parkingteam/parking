@@ -6,4 +6,5 @@ urlpatterns = [
     path('intro', views.Intro),
     path('weekday', views.Weekday),
     path('weekend', views.Weekend), 
+    path('result', views.Result), 
 ]
